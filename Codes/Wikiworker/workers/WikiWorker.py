@@ -9,7 +9,7 @@ class WikiWorker():
 
     @staticmethod   # we are not use class property in this funcition, make it as a static method
     def _extract_company_symbols(page_html):
-        soup = BeautifulSoup(page_html) # 'lxml'
+        soup = BeautifulSoup(page_html, 'lxml')
         table = soup.find(id='constituents')
         table_rows = table.find_all('tr')
 
@@ -25,4 +25,3 @@ class WikiWorker():
             return []
         
         yield from self._extract_company_symbols(response.text)
-
