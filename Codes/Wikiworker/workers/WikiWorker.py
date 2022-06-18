@@ -1,7 +1,7 @@
 from urllib import response
 import requests
 from bs4 import BeautifulSoup
-
+from lxml import html
 
 class WikiWorker():
     def __init__(self):
