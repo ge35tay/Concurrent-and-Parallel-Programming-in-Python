@@ -1,4 +1,3 @@
-import queue
 from threading import Thread
 from multiprocessing import Process, Queue
 import time
